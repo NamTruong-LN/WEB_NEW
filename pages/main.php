@@ -63,6 +63,9 @@
             elseif($tam == 'xemdonhang'){
                 include("../PROJECT_WEB/pages/main/xemdonhang.php");
             }
+            elseif($tam == 'muahangngay'){
+                include("../PROJECT_WEB/pages/main/muahangngay.php");
+            }
             else{
                  include("./pages/main/index.php");   
             }

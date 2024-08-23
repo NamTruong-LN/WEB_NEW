@@ -14,11 +14,9 @@
         while ($row_product = mysqli_fetch_assoc($query_product)) {
     ?>
     <li>        
-        <a href="./index.php?quanly=sanpham&id=<?php echo $row_product['id_sanpham']?>">
-            <img src="./admin/module/quanlysanpham/uploads/<?php echo $row_product['hinhanh']?>">
-            <p class="title_product">Tên sản phẩm:<?php echo $row_product['tensanpham']?></p>
-            <p class="price_product">Giá:<?php echo number_format($row_product['giasanpham'],0,',','.').'vnđ'?></p>
-        </a>
+        <a href="./index.php?quanly=sanpham&id=<?php echo $row_product['id_sanpham']?>"><img src="./admin/module/quanlysanpham/uploads/<?php echo $row_product['hinhanh']?>"></a>
+        <a href="./index.php?quanly=sanpham&id=<?php echo $row_product['id_sanpham']?>"><p class="title_product">Tên sản phẩm:<?php echo $row_product['tensanpham']?></p></a>    
+        <p class="price_product">Giá:<?php echo number_format($row_product['giasanpham'],0,',','.').'vnđ'?></p>
     </li>
     <?php 
         }   

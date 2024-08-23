@@ -30,7 +30,6 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
                 <?php 
                     }
                 ?>
-
             </div>
         </form>
     </div>

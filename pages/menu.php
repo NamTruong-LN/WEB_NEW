@@ -30,7 +30,7 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
 
         if (isset($_SESSION['dangky'])) {
         ?>
-            <li><a href="./index.php?quanly=lichsudonhang">Lịch sử đơn hàng</a></li>
+            <li><a href="./index.php?quanly=lichsudonhang"><i class="fa-solid fa-truck-fast"></i></a></li>
             <li><a href="./index.php?dangxuat=1">Đăng xuất</a></li>
             <li><a href="./index.php?quanly=thaydoimatkhau">Đổi mật khẩu</a></li>
             
