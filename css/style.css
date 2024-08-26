@@ -43,6 +43,7 @@ body{
     margin-top: 25px;
     height: 25px;
     border-radius: 10px;
+    outline: none;
 }
 .header li {
     list-style: none;

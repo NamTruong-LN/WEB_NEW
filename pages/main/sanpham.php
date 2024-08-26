@@ -23,6 +23,7 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
 
                 ?>
                 <p><input class="addtocart" name="themgiohang" type="submit" value="Thêm giỏ hàng"></p>
+                <!-- <p><input class="addtocart" name="muahangngay" type="submit" value="Mua ngay"></p> -->
                 <?php 
                     }else{
                 ?>

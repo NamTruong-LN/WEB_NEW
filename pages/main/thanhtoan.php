@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('../../admin/config/config.php');
+    include("../../admin/config/config.php");
     require('../../carbon/autoload.php');
     require('../../mail/sendmail.php');
     use Carbon\Carbon;
@@ -17,6 +17,11 @@
             $soluong = $value['soluong'];
             $insert_order_detail = "INSERT INTO tbl_cart_detail(id_sanpham,code_cart,soluongmua) VALUE('".$id_sanpham."','".$code_order."','".$soluong."')";
             mysqli_query($mysqli,$insert_order_detail);
+
+            //new
+            if (!$order_detail_query) {
+                die("Lỗi khi chèn chi tiết đơn hàng: " . mysqli_error($mysqli));
+            }
         }
 
         $tieude = "Đặt hàng website bán giày thành công!";
@@ -25,8 +30,11 @@
         $maildathang = $_SESSION['email'];
         $mail = new Mailer();
         $mail -> dathangmail($tieude,$noidung,$maildathang);
+    } else {
+        die("Lỗi khi chèn giỏ hàng: " . mysqli_error($mysqli));
     }
 
     unset($_SESSION['cart']);
     header('Location: ../../index.php?quanly=camon');
+    exit();
 ?>

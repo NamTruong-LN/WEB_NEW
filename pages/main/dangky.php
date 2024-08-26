@@ -4,18 +4,30 @@
         $email = $_POST['email'];
         $dienthoai = $_POST['dienthoai'];
         $diachi = $_POST['diachi'];
-        $matkhau = md5($_POST['matkhau']);
-        $sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(tenkhachhang,email,diachi,matkhau,dienthoai) 
-        VALUE('".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$dienthoai."')");
+        $matkhau = $_POST['matkhau'];
+
+        // Kiểm tra nếu bất kỳ trường nào bị bỏ trống
+            if(empty($tenkhachhang) || empty($email) || empty($dienthoai) || empty($diachi) || empty($matkhau)) {
+                echo '<p style="color:red">Vui lòng điền đầy đủ thông tin!</p>';
+            } else {
+            // Mã hóa mật khẩu
+            $matkhau = md5($matkhau);
+            // Thực hiện truy vấn đăng kí
+            $sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(tenkhachhang,email,diachi,matkhau,dienthoai) 
+            VALUE('".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$dienthoai."')");
+
         if($sql_dangky){
-            echo '<p style ="color:green">Bạn đã đăng ký thành công</p> ';
+            // echo '<p style ="color:green">Bạn đã đăng ký thành công</p> ';
             $_SESSION['dangky'] = $tenkhachhang;
             $_SESSION['email'] = $email;
             $_SESSION['id_khachhang'] = mysqli_insert_id($mysqli);
-            header('location: index.php?quanly=giohang');
+            echo '<script>alert("Đăng ký thành công");</script>';
+            // header('location: index.php?quanly=dangnhap');
+            echo '<script>setTimeout(function(){ window.location.href = "index.php?quanly=dangnhap"; }, 1000);</script>';
+            exit();
         }
     }
-
+}
 ?>
 <p>Đăng ký thành viên</p>
 <style>
@@ -31,7 +43,7 @@
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="text" size="50" name="email"></td>
+            <td><input type="email" size="50" name="email"></td>
         </tr>
         <tr>
             <td>Điện thoại</td>

@@ -4,7 +4,6 @@ if(isset($_SESSION['dangky'])){
     echo 'Xin chào: '.'<span style="color:red">' .$_SESSION['dangky'].'</span>';
     $_SESSION['id_khachhang'] ;
 }
-
 ?>
 <?php
 if (isset($_SESSION['cart'])) {

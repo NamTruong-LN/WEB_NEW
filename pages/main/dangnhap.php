@@ -2,6 +2,10 @@
     if(isset($_POST['dangnhap'])){
         $email = $_POST['email'];
         $matkhau = md5($_POST['password']);
+
+        if(empty($email) || empty($matkhau)){
+            echo'<p style="coler:red">Vui lòng điền đầy đủ thông tin</p>';
+        }else{
         $sql = "SELECT * FROM tbl_dangky WHERE email = '".$email."' AND matkhau = '".$matkhau."' LIMIT 1";
         $row = mysqli_query($mysqli,$sql);
         $count = mysqli_num_rows($row);
@@ -9,16 +13,17 @@
         if($count > 0){
             $row_data = mysqli_fetch_array($row);
             $_SESSION['dangky'] = $row_data['tenkhachhang'];
-            $_SESSION['emal'] = $row_data['email'];
+            $_SESSION['email'] = $row_data['email'];
             $_SESSION['id_khachhang'] = $row_data['id_dangky'];
-            header("location: index.php?quanly=giohang");
+            header("location: index.php");
         }else{ 
             echo '<p style="coler:red">Mật khẩu hoặc email sai, vui lòng nhập lại.</p>';
         }
     }
+}
 ?>
 
-<form class="dangnhap" action="" autocomplete="off" method="post" style="text-align: center;">
+<form class="dangnhap" action=""  method="post" style="text-align: center;">
     <p>Đăng nhập khách hàng</p>
     <p>Tài Khoản</p>
     <div class="user">

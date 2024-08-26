@@ -1,9 +1,3 @@
-<?php 
-if(isset($_SESSION['dangky'])){
-    // echo 'Xin chào: '.'<span style="color:red">' .$_SESSION['dangky'].'</span>';
-    $_SESSION['id_khachhang'] ;
-}
-?>
 <?php
     $i=0;
     if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
@@ -22,6 +16,7 @@ if(isset($_SESSION['dangky'])){
                 <input type="submit" name="timkiem" value="Tìm kiếm">
             </p>
     </form>
+
     <li class="giohang">
             <a href="./index.php?quanly=giohang"><i class="fa-solid fa-cart-shopping" style="padding:5px;"></i></a>
                 <div class="chiso">

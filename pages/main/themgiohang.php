@@ -170,3 +170,4 @@ if (isset($_POST['themgiohang'])) {
     }
     header('location: ../../index.php?quanly=giohang');
 }
+?>

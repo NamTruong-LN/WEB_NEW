@@ -7,9 +7,10 @@ if (isset($_POST['themvanchuyen'])) {
     $address = $_POST['address'];
     $note = $_POST['note'];
     $id_dangky = $_SESSION['id_khachhang'];
+    
     $sql_them_vanchuyen = mysqli_query($mysqli, "INSERT INTO tbl_shipping(name,phone,address,note,id_dangky) 
     VALUE('$name','$phone','$address','$note','$id_dangky') ");
-    if ($sql_them_vanchuyen) {
+    if($sql_them_vanchuyen) {
         echo '<script>alert("Thêm vận chuyển thành công")</script>';
     }
 }elseif(isset($_POST['capnhatvanchuyen'])){
@@ -24,7 +25,6 @@ if (isset($_POST['themvanchuyen'])) {
         echo '<script>alert("Cập nhật vận chuyển thành công")</script>';
     }
 }
-
 ?>
 <?php
 if (isset($_SESSION['cart'])) {
@@ -52,7 +52,7 @@ if (isset($_SESSION['cart'])) {
     <div>
         <form action="" autocomplete="off" method="post">
             <div class="form-group">
-                <label for="email">Họn và tên:</label>
+                <label for="email">Họ và tên:</label>
                 <input type="text" name="name" class="form-control" value="<?php echo $name?>" placeholder="............">
             </div>
             <div class="form-group">
