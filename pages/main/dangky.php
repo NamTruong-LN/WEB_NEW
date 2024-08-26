@@ -59,7 +59,7 @@
         </tr>
         <tr>
             <td><input type="submit" name="dangky" value="Đăng ký"></td>
-            <td><a href="index.php?quanly=dangnhap">Đăng nhập nếu có tài khoản</a></td>
+            <td><a href="index.php?quanly=dangnhap">Đăng nhập</a></td>
         </tr>
     </table>
 </form>

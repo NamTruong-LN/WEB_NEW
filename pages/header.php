@@ -8,8 +8,8 @@
 }
 ?>
 <div class="header">
-    <img src="../images/loging_bg.png" alt="">
-    
+    <!-- <img src="../images/loging_bg.png" alt=""> -->
+    <p>ADIDAS</p>
     <form class="timkiem" action="index.php?quanly=timkiem" method="POST">
             <p>
                 <input type="text" placeholder="Tìm kiếm sản phẩm..." name="tukhoa">
