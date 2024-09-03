@@ -1,6 +1,6 @@
-<p>Hình thức thanh toán</p>
+<!-- <p>Hình thức thanh toán</p> -->
 <!-- <div><a href="index.php?quanly=vanchuyen">Vận chuyển</a></div> -->
-<form action="pages/main/xulythanhtoan.php" autocomplete="off" method="post">
+<form action="pages/main/xulythanhtoan.php" autocomplete="off" method="post" class="shipping-form">
     <div class="row">
         <?php
         $id_dangky = $_SESSION['id_khachhang'];
@@ -20,7 +20,7 @@
             $note = '';
         }
         ?>
-        <div>
+        <div class="shipping-details">
             <h4>Thông tin vận chuyển và đơn hàng</h4>
             <ul>
                 <li>Họ và tên vận chuyển: <b><?php echo $name ?></b></li>
@@ -99,7 +99,7 @@
     }
     ?>
 </table>
-<div>
+<div class="payment-form">
     <h4>Hình thức thanh toán</h4>
     <div>
         <input type="radio" name="payment" value="tien mat" checked>

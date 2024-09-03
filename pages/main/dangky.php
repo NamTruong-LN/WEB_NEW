@@ -29,13 +29,14 @@
     }
 }
 ?>
-<p>Đăng ký thành viên</p>
+<!-- <p>Đăng ký thành viên</p> -->
 <style>
     .dangky tr td {
         padding: 5px;
     }
 </style>
-<form action="" method="POST">
+
+<form action="" method="POST" >
     <table class="dangky" border="1" width="50%" style="border-collapse: collapse">
         <tr>
             <td>Họ và tên</td>
@@ -63,3 +64,5 @@
         </tr>
     </table>
 </form>
+
+

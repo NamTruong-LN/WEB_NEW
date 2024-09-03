@@ -20,6 +20,7 @@ ul.admin_list li {
     height: auto;
     width: 90%;
     margin: 0 auto;
+    /* background-color: rgb(144, 153, 147); */
 }
 /* ----- */
 /* admin.css */
@@ -42,7 +43,7 @@ h3 {
 
 /* Header */
 .title_admin {
-    background-color: #4CAF50;
+    background-color: rgb(144, 153, 147);
     color: white;
     padding: 15px;
     text-align: center;

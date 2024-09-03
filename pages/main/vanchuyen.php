@@ -1,4 +1,4 @@
-<p>Thông tin vận chuyển</p>
+<!-- <p>Thông tin vận chuyển</p> -->
 <!-- <div><a href="index.php?quanly=vanchuyen">Vận chuyển</a></div> -->
 <?php
 if (isset($_POST['themvanchuyen'])) {
@@ -7,7 +7,6 @@ if (isset($_POST['themvanchuyen'])) {
     $address = $_POST['address'];
     $note = $_POST['note'];
     $id_dangky = $_SESSION['id_khachhang'];
-    
     $sql_them_vanchuyen = mysqli_query($mysqli, "INSERT INTO tbl_shipping(name,phone,address,note,id_dangky) 
     VALUE('$name','$phone','$address','$note','$id_dangky') ");
     if($sql_them_vanchuyen) {
@@ -49,7 +48,7 @@ if (isset($_SESSION['cart'])) {
         $note = '';
     }
     ?>
-    <div>
+    <div class="form-container">
         <form action="" autocomplete="off" method="post">
             <div class="form-group">
                 <label for="email">Họ và tên:</label>
@@ -78,7 +77,6 @@ if (isset($_SESSION['cart'])) {
             <?php 
                 }
             ?>
-
         </form>
     </div>
 </div>

@@ -56,7 +56,7 @@ if (isset($_SESSION['cart'])) {
                 </td>
                 <td><?php echo number_format($cart_item['giasanpham'],0,',','.').'vnđ' ?></td>
                 <td><?php echo number_format($thanhtien,0,',','.').'vnđ' ?></td>
-                <td><a href="../PROJECT_WEB/pages/main/themgiohang.php?xoa=<?php echo $cart_item['id']?>"><i class="fa-solid fa-trash-can"></i></a></td>
+                <td class="xoa"><a href="../PROJECT_WEB/pages/main/themgiohang.php?xoa=<?php echo $cart_item['id']?>"><i class="fa-solid fa-trash-can"></i></a></td>
             </tr>
         <?php
         }

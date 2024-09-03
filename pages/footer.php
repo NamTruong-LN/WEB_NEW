@@ -1,11 +1,11 @@
-<div class="clear">
-</div>
+<div class="clear"></div>
 <div class="footer">
     <!-- <p class="footer_copyright">Copyright by Trường</p> -->
     <footer>
         <div class="footer_main">
             <div class="tag">
-                <img src="../../Project_Group09/ASS/IMG/hinh102.png" alt="ADIDAS">
+                <!-- <img src="../../Project_Group09/ASS/IMG/hinh102.png" alt="ADIDAS"> -->
+                 <p>ADIDAS</p>
             </div>
             <div class="tag">
                 <h1>Contact</h1>
@@ -46,3 +46,4 @@
         </div>
     </footer>
 </div>
+

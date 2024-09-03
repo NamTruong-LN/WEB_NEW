@@ -1,4 +1,5 @@
 <?php
+ob_start();
 if (isset($_POST['dangnhap'])) {
     $email = $_POST['email'];
     $matkhau = md5($_POST['password']);
@@ -15,13 +16,14 @@ if (isset($_POST['dangnhap'])) {
             $_SESSION['dangky'] = $row_data['tenkhachhang'];
             $_SESSION['email'] = $row_data['email'];
             $_SESSION['id_khachhang'] = $row_data['id_dangky'];
-            // header("location: index.php");
-            header("Location: " . $_SERVER['PHP_SELF']);
+            header("location: index.php");
+            // header("Location: ../index.php ");
         } else {
             echo '<p style="coler:red">Mật khẩu hoặc email sai, vui lòng nhập lại.</p>';
         }
     }
 }
+ob_end_flush();
 ?>
 
 <form class="dangnhap" action="" method="post" style="text-align: center;">

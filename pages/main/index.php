@@ -8,10 +8,10 @@
     if($page == '' || $page == 1){
         $begin = 0;
     }else{
-        $begin = ($page*3) - 4;
+        $begin = ($page*4) - 3;
     }
     $sql_product = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc 
-    ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,8";
+    ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,6";
     $query_product = mysqli_query($mysqli, $sql_product);
 
 ?>
@@ -123,6 +123,7 @@ if (isset($_POST['themgiohang'])) {
         text-align: center;
     }
 </style>
+<br>
 <?php
 $sql_trang = mysqli_query($mysqli,"SELECT * FROM tbl_sanpham");
 $row_count = mysqli_num_rows($sql_trang);
